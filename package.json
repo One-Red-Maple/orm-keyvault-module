@@ -1,0 +1,30 @@
+{
+  "name": "orm-keyvault-module",
+  "version": "1.0.0",
+  "description": "One Red Maple module for pulling secrets from Azure keyvault",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/One-Red-Maple/orm-keyvault-module.git"
+  },
+  "keywords": [
+    "ORM",
+    "logging"
+  ],
+  "author": "Eric Dion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/One-Red-Maple/orm-keyvault-module/issues"
+  },
+  "homepage": "https://github.com/One-Red-Maple/orm-keyvault-module#readme",
+  "dependencies": {
+    "@azure/identity": "^3.1.3",
+    "@azure/keyvault-secrets": "^4.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
