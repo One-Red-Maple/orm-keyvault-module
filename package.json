@@ -1,6 +1,6 @@
 {
   "name": "orm-keyvault-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One Red Maple module for pulling secrets from Azure keyvault",
   "main": "index.js",
   "scripts": {
