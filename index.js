@@ -50,8 +50,9 @@ module.exports = {
             let parsedSecretName = secretName.replaceAll('-', '_');
             
             const latestSecret = await client.getSecret(secretName);
-
-            process.env[parsedSecretName]= latestSecret.value
+            
+            if(!process.env[parsedSecretName])
+                process.env[parsedSecretName]= latestSecret.value;
         }
 
     }
