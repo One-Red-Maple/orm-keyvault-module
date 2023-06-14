@@ -13,7 +13,7 @@ const configKeys = [
 configKeys.forEach((configKey)=>{
 
     if(!process.env[configKey])
-        throw new Error(`Missing environment varable ${configKey}`);
+        throw new Error(`Missing environment variable ${configKey}`);
     
 })
 
