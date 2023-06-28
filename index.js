@@ -13,7 +13,7 @@ const configKeys = [
 configKeys.forEach((configKey)=>{
 
     if(!process.env[configKey])
-        throw new Error(`Missing environment varable ${configKey}`);
+        throw new Error(`Missing environment variable ${configKey}`);
     
 })
 
@@ -38,19 +38,19 @@ module.exports = {
     async copyKeysToEnv() {
 
         let secretNames= []
-        
+
         for await (let secretProperties of client.listPropertiesOfSecrets()) {
 
             secretNames.push(secretProperties.name)
-            
+
         }
-        
+
         for( secretName of secretNames){
 
             let parsedSecretName = secretName.replaceAll('-', '_');
-            
+
             const latestSecret = await client.getSecret(secretName);
-            
+
             if(!process.env[parsedSecretName])
                 process.env[parsedSecretName]= latestSecret.value;
         }
