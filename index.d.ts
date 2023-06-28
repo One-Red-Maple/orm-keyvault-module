@@ -16,6 +16,6 @@ declare module "@azure/keyvault-secrets" {
     }
 }
 
-declare module "keyvault-env" {
+declare module "orm-keyvault-module" {
     export function copyKeysToEnv(): Promise<void>;
 }
